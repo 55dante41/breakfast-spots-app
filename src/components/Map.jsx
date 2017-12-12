@@ -18,7 +18,7 @@ export default class Map extends React.Component {
             this.loadMap(prevProps.google !== this.props.google);
         }
 
-        if (this.props.selectedVenue) {
+        if (this.props.selectedVenue && prevProps.selectedVenue !== this.props.selectedVenue) {
             this.animateMarker(this.state.markers[this.props.selectedVenue.id]);
         }
     }
