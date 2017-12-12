@@ -9,7 +9,8 @@ export default class Map extends React.Component {
 
         this.state = {
             "markers": null,
-            "selectedMarker": null
+            "selectedMarker": null,
+            "errorMessage": null
         };
     }
 
@@ -33,11 +34,20 @@ export default class Map extends React.Component {
             "height": "97vh",
             "display": "inline-block"
         };
-        return (
-            <div ref="map" style={style}>
-                Loading...
-            </div>
-        );
+        if (this.props.loaded) {
+            return (
+                <div ref="map" style={style}>
+                    Loading...
+                </div>
+            );
+        } else {
+            return (
+                <div ref="map" style={style}>
+                    Failed to load map
+                </div>
+            );
+        }
+
     }
 
     clearMarkers() {

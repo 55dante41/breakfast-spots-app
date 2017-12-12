@@ -52,7 +52,6 @@ export default class MapApplication extends React.Component {
     }
 
     onMarkerClicked(venueId) {
-        console.log("marker clicked");
         this.setState(Object.assign({}, this.state, {
             "selectedMarkerVenue": venueId
         }));
@@ -77,7 +76,6 @@ export default class MapApplication extends React.Component {
             selectedVenue,
             selectedMarkerVenue
         } = this.state;
-        console.log("Re rendering");
         return (
             <div>
                 <GoogleApiComponent

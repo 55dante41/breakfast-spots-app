@@ -11,6 +11,8 @@ export const ScriptCache = (function (global) {
                 if (stored) {
                     stored.promise.then(() => {
                         stored.error ? cb(stored.error) : cb(null, stored);
+                    }).catch(function (err) {
+                        cb(err);
                     });
                 } else {
                     // TODO:

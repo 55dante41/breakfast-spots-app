@@ -60,12 +60,21 @@ export default class GoogleApiWrapper extends React.Component {
     }
 
     componentDidMount() {
+
         this.scriptCache.google.onLoad((err, tag) => {
-            this.setState({
-                "loaded": true,
-                "google": window.google
-            });
+            if (err) {
+                this.setState({
+                    "loaded": false,
+                    "google": null
+                });
+            } else {
+                this.setState({
+                    "loaded": true,
+                    "google": window.google
+                });
+            }
         });
+
     }
 
     render() {
