@@ -76,19 +76,30 @@ export default class MapApplication extends React.Component {
             selectedVenue,
             selectedMarkerVenue
         } = this.state;
-        return (
-            <div>
-                <GoogleApiComponent
-                    venues={filteredVenues}
-                    selectedVenue={selectedVenue}
-                    onMarkerClicked={this.onMarkerClicked.bind(this)} />
+        const {
+            error
+        } = this.props;
+        if (error) {
+            return (
+                <div>
+                    Failed to load locations from foursquare
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <GoogleApiComponent
+                        venues={filteredVenues}
+                        selectedVenue={selectedVenue}
+                        onMarkerClicked={this.onMarkerClicked.bind(this)} />
 
-                <Sidebar
-                    venues={filteredVenues}
-                    selectedMarkerVenue={selectedMarkerVenue}
-                    onFilterInputChanged={this.onFilterInputChanged.bind(this)}
-                    onLocationItemClicked={this.onLocationItemClicked.bind(this)} />
-            </div>
-        );
+                    <Sidebar
+                        venues={filteredVenues}
+                        selectedMarkerVenue={selectedMarkerVenue}
+                        onFilterInputChanged={this.onFilterInputChanged.bind(this)}
+                        onLocationItemClicked={this.onLocationItemClicked.bind(this)} />
+                </div>
+            );
+        }
     }
 }
