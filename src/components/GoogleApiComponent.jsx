@@ -81,9 +81,9 @@ export default class GoogleApiWrapper extends React.Component {
         const props = Object.assign({}, this.props, {
             loaded: this.state.loaded,
             google: this.state.google,
-            zoom: 13,
-            lat: 49.24966,
-            long: -123.11934
+            zoom: 12,
+            lat: 49.277328139671546,
+            long: -123.10702423658302
         });
         return (
             <Map {...props} />

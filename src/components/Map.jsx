@@ -135,7 +135,7 @@ Map.propTypes = {
 };
 
 Map.defaultProps = {
-    zoom: 10,
-    lat: 49.24966,
-    long: -123.11934
+    zoom: 12,
+    lat: 49.277328139671546,
+    long: -123.10702423658302
 }; //Vancouver
