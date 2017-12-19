@@ -8,7 +8,7 @@ export default class LocationDetails extends React.Component {
         const style = {
             "padding": "10px",
             "overflowY": "auto",
-            "height": "30vh",
+            "height": "28vh",
             "backgroundColor": "black",
             "color": "white"
         };
