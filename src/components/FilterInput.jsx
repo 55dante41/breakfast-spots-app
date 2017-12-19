@@ -20,16 +20,16 @@ export default class FilterInput extends React.Component {
         const { input } = this.state;
         const style = {
             "width": "95%",
-            "marginTop": "5px",
             "marginLeft": "5px"
         };
         return (
-            <div>
+            <section>
+                <h4>Filter your locations: </h4>
                 <input
                     style={style}
                     value={input}
                     onChange={(e) => { this.handleChange(e) }} />
-            </div>
+            </section>
         );
     }
 }

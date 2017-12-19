@@ -8,14 +8,14 @@ export default class LocationDetails extends React.Component {
         const style = {
             "padding": "10px",
             "overflowY": "auto",
-            "height": "30vh",
+            "height": "45vh",
             "backgroundColor": "black",
             "color": "white"
         };
 
         if (!selectedItem) {
             return (
-                <details style={style}>Please select a location to view the details</details>
+                <h3 style={style}>Please select a location to view the details here</h3>
             );
         }
         return (
