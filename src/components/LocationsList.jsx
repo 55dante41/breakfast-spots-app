@@ -38,9 +38,12 @@ export default class LocationsList extends React.Component {
             overflowY: "auto"
         };
         return (
-            <div style={style}>
-                {locationItemComponents}
-            </div>
+            <section>
+                <h4>List of Locations</h4>
+                <div style={style}>
+                    {locationItemComponents}
+                </div>
+            </section>
         );
     }
 }
