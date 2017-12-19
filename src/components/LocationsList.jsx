@@ -34,8 +34,9 @@ export default class LocationsList extends React.Component {
         }
         const style = {
             padding: "10px",
-            height: "45vh",
-            overflowY: "auto"
+            height: "25vh",
+            overflowY: "auto",
+            tabIndex: 2
         };
         return (
             <section>

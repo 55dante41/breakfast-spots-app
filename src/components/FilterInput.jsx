@@ -20,7 +20,8 @@ export default class FilterInput extends React.Component {
         const { input } = this.state;
         const style = {
             "width": "95%",
-            "marginLeft": "5px"
+            "marginLeft": "5px",
+            "tabIndex": 1
         };
         return (
             <section>

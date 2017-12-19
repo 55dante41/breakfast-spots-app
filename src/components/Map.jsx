@@ -32,7 +32,8 @@ export default class Map extends React.Component {
         const style = {
             "width": "50%",
             "height": "97vh",
-            "display": "inline-block"
+            "display": "inline-block",
+            "tabIndex": 4
         };
         if (this.props.loaded) {
             return (
