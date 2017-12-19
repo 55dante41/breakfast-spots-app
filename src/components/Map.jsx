@@ -32,12 +32,11 @@ export default class Map extends React.Component {
         const style = {
             "width": "50%",
             "height": "97vh",
-            "display": "inline-block",
-            "tabIndex": 4
+            "display": "inline-block"
         };
         if (this.props.loaded) {
             return (
-                <article ref="map" style={style}>
+                <article ref="map" style={style} tabIndex="4">
                     Loading...
                 </article>
             );

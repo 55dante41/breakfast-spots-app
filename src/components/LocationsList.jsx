@@ -35,13 +35,12 @@ export default class LocationsList extends React.Component {
         const style = {
             padding: "10px",
             height: "25vh",
-            overflowY: "auto",
-            tabIndex: 2
+            overflowY: "auto"
         };
         return (
             <section>
                 <h4>List of Locations</h4>
-                <div style={style}>
+                <div style={style} tabIndex="2">
                     {locationItemComponents}
                 </div>
             </section>

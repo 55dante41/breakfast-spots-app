@@ -10,8 +10,7 @@ export default class LocationDetails extends React.Component {
             "overflowY": "auto",
             "height": "30vh",
             "backgroundColor": "black",
-            "color": "white",
-            "tabIndex": 3
+            "color": "white"
         };
 
         if (!selectedItem) {
@@ -20,7 +19,7 @@ export default class LocationDetails extends React.Component {
             );
         }
         return (
-            <details style={style}>
+            <details style={style} tabIndex="3">
                 <h4> {selectedItem.name} </h4>
                 <h5> {selectedItem.location.formattedAddress.join(", ")}</h5>
             </details>

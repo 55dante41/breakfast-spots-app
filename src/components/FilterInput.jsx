@@ -20,13 +20,13 @@ export default class FilterInput extends React.Component {
         const { input } = this.state;
         const style = {
             "width": "95%",
-            "marginLeft": "5px",
-            "tabIndex": 1
+            "marginLeft": "5px"
         };
         return (
             <section>
                 <h4>Filter your locations: </h4>
                 <input
+                    tabIndex="1"
                     style={style}
                     value={input}
                     onChange={(e) => { this.handleChange(e) }} />
