@@ -81,9 +81,10 @@ export default class MapApplication extends React.Component {
         } = this.props;
         if (error) {
             return (
-                <div>
-                    Failed to load locations from foursquare
-                </div>
+                <main style={{ background: "#2c2c2c", height: "98vh" }}>
+                    <div style={{ backgroundImage: "url(./should_fix.JPG)", width: "100%", height: "98vh", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center" }}>
+                    </div>
+                </main>
             );
         } else {
             return (

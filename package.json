@@ -12,7 +12,7 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "REACT_APP_NODE_ENV=production REACT_APP_PUBLIC_URL=https://breakfast-spots.herokuapp.com REACT_APP_ENV=production react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
