@@ -19,7 +19,7 @@ export default class LocationDetails extends React.Component {
             );
         }
         return (
-            <details style={style} tabIndex="3">
+            <details style={style} tabIndex="3" open>
                 <h4> {selectedItem.name} </h4>
                 <h5> {selectedItem.location.formattedAddress.join(", ")}</h5>
             </details>

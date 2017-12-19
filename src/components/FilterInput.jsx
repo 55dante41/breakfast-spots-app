@@ -29,7 +29,7 @@ export default class FilterInput extends React.Component {
                     tabIndex="1"
                     style={style}
                     value={input}
-                    onChange={(e) => { this.handleChange(e) }} />
+                    onChange={(e) => { this.handleChange(e); }} />
             </section>
         );
     }

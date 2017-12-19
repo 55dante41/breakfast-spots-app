@@ -6,11 +6,9 @@ export default class LocationItem extends React.Component {
             venue
         } = this.props;
         return (
-            <div tabIndex="2" style={{ width: "100%" }}>
-                <a onClick={this.handleClick.bind(this)}>
-                    <h4> {venue.name} ( <span> {venue.location.address} </span> ) </h4>
-                </a>
-            </div>
+            <li tabIndex="2" style={{ width: "100%", cursor: "pointer" }} onClick={this.handleClick.bind(this)}>
+                <h5> {venue.name} ( <span> {venue.location.address} </span> ) </h5>
+            </li>
         );
     }
 

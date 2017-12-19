@@ -40,9 +40,9 @@ export default class LocationsList extends React.Component {
         return (
             <section>
                 <h4>List of Locations</h4>
-                <div style={style} tabIndex="2">
+                <ul style={style} tabIndex="2">
                     {locationItemComponents}
-                </div>
+                </ul>
             </section>
         );
     }
