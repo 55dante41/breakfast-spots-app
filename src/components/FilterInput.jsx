@@ -23,7 +23,7 @@ export default class FilterInput extends React.Component {
             "height": "2em"
         };
         return (
-            <section style={{ padding: "10px", "color": "white", "background": "white" }}>
+            <section style={{ padding: "10px", "color": "white", "background": "black" }}>
                 <h4>Filter your locations: </h4>
                 <input
                     tabIndex="1"
