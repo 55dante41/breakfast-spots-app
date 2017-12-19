@@ -15,14 +15,14 @@ export default class LocationDetails extends React.Component {
 
         if (!selectedItem) {
             return (
-                <div style={style}>Please select a location to view the details</div>
+                <details style={style}>Please select a location to view the details</details>
             );
         }
         return (
-            <div style={style}>
+            <details style={style}>
                 <h4> {selectedItem.name} </h4>
                 <h5> {selectedItem.location.formattedAddress.join(", ")}</h5>
-            </div>
+            </details>
         );
     }
 }
