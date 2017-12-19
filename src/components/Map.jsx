@@ -20,7 +20,9 @@ export default class Map extends React.Component {
         }
 
         if (this.props.selectedVenue && prevProps.selectedVenue !== this.props.selectedVenue) {
-            this.animateMarker(this.state.markers[this.props.selectedVenue.id]);
+            if (this.state.markers && this.state.markers[this.props.selectedVenue.id]) {
+                this.animateMarker(this.state.markers[this.props.selectedVenue.id]);
+            }
         }
     }
 
@@ -34,20 +36,24 @@ export default class Map extends React.Component {
             "height": "97vh",
             "display": "inline-block"
         };
-        if (this.props.loaded) {
+
+        if (this.props.errored) {
             return (
                 <article ref="map" style={style} tabIndex="4">
-                    Loading...
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        Failed to load the map view :(
+                    </div>
                 </article>
             );
         } else {
             return (
-                <article ref="map" style={style}>
-                    Failed to load map
+                <article ref="map" style={style} tabIndex="4">
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <img src="./globe_spinner.svg" alt="Loading..." />
+                    </div>
                 </article>
             );
         }
-
     }
 
     clearMarkers() {
