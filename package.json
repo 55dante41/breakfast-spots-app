@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^4.13.0",
+    "eslint-plugin-react": "^7.5.1",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "eslint": "^4.13.0",
-    "eslint-plugin-react": "^7.5.1"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "REACT_APP_NODE_ENV=production REACT_APP_PUBLIC_URL=https://breakfast-spots.herokuapp.com REACT_APP_ENV=production react-scripts start",
