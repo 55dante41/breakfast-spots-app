@@ -46,6 +46,7 @@ export default class GoogleApiWrapper extends React.Component {
 
         this.state = {
             "loaded": false,
+            "errored": false,
             "google": null
         };
     }
@@ -65,11 +66,13 @@ export default class GoogleApiWrapper extends React.Component {
             if (err) {
                 this.setState({
                     "loaded": false,
+                    "errored": true,
                     "google": null
                 });
             } else {
                 this.setState({
                     "loaded": true,
+                    "errored": false,
                     "google": window.google
                 });
             }
@@ -80,6 +83,7 @@ export default class GoogleApiWrapper extends React.Component {
     render() {
         const props = Object.assign({}, this.props, {
             loaded: this.state.loaded,
+            errored: this.state.errored,
             google: this.state.google,
             zoom: 12,
             lat: 49.277328139671546,
