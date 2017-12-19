@@ -9,7 +9,6 @@ import cachedVenues from "./cachedVenues";
 new Foursquare()
     .exploreVenues()
     .then(function (venues) {
-        console.log(JSON.stringify(venues));
         ReactDOM.render(
             <MapApplication venues={venues} error={null} />, document.getElementById("root")
         );
