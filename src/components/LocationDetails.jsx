@@ -7,7 +7,10 @@ export default class LocationDetails extends React.Component {
         } = this.props;
         const style = {
             "padding": "10px",
-            "overflowY": "auto"
+            "overflowY": "auto",
+            "height": "30vh",
+            "backgroundColor": "black",
+            "color": "white"
         };
 
         if (!selectedItem) {

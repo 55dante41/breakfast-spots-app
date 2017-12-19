@@ -87,7 +87,7 @@ export default class MapApplication extends React.Component {
             );
         } else {
             return (
-                <div>
+                <main>
                     <GoogleApiComponent
                         venues={filteredVenues}
                         selectedVenue={selectedVenue}
@@ -98,7 +98,7 @@ export default class MapApplication extends React.Component {
                         selectedMarkerVenue={selectedMarkerVenue}
                         onFilterInputChanged={this.onFilterInputChanged.bind(this)}
                         onLocationItemClicked={this.onLocationItemClicked.bind(this)} />
-                </div>
+                </main>
             );
         }
     }

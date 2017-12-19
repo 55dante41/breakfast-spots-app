@@ -36,15 +36,15 @@ export default class Map extends React.Component {
         };
         if (this.props.loaded) {
             return (
-                <div ref="map" style={style}>
+                <article ref="map" style={style}>
                     Loading...
-                </div>
+                </article>
             );
         } else {
             return (
-                <div ref="map" style={style}>
+                <article ref="map" style={style}>
                     Failed to load map
-                </div>
+                </article>
             );
         }
 
@@ -65,6 +65,7 @@ export default class Map extends React.Component {
     }
 
     animateMarker(marker) {
+        this.map.setCenter(marker.position);
         marker.setAnimation(this.props.google.maps.Animation.BOUNCE);
         setTimeout(function () {
             marker.setAnimation(null);

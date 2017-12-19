@@ -19,7 +19,10 @@ export default class FilterInput extends React.Component {
     render() {
         const { input } = this.state;
         const style = {
-            "width": "100%"
+            "width": "95%",
+            "marginTop": "5px",
+            "marginLeft": "5px",
+            "textAlign": "center"
         };
         return (
             <div>

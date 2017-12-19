@@ -50,11 +50,10 @@ export default class Sidebar extends React.Component {
             "width": "50%",
             "height": "97vh",
             "display": "inline-block",
-            "verticalAlign": "top",
-            "overflow": "auto"
+            "verticalAlign": "top"
         };
         return (
-            <div style={style}>
+            <aside style={style}>
                 <FilterInput
                     onInputChanged={onFilterInputChanged} />
                 <LocationsList
@@ -62,7 +61,7 @@ export default class Sidebar extends React.Component {
                     onLocationItemClicked={this.onLocationItemClicked.bind(this)} />
                 <LocationDetails
                     selectedItem={selectedVenue} />
-            </div>
+            </aside>
         );
     }
 }
